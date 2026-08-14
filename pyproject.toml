@@ -1,0 +1,13 @@
+[project]
+name = "fast-api-project"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.141.1",
+    "openai>=3.0.0",
+    "uvicorn>=0.52.1",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true

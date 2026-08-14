@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小汪老师的什亭之匣♡</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💙</text></svg>"
+      type="image/svg+xml"
+    />
+  </head>
+  <body>
+    <!-- ==================== 背景漂浮装饰 ==================== -->
+    <div class="bg-deco" aria-hidden="true">
+      <span class="deco deco-1">💙</span>
+      <span class="deco deco-2">✨</span>
+      <span class="deco deco-3">💕</span>
+      <span class="deco deco-4">🎀</span>
+      <span class="deco deco-5">⭐</span>
+      <span class="deco deco-6">📱</span>
+      <span class="deco deco-7">🩷</span>
+      <span class="deco deco-8">🌟</span>
+    </div>
+
+    <!-- ==================== 顶部导航 ==================== -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <span class="brand">
+          <span class="brand-logo">💙</span>
+          <span class="brand-name">阿罗娜终端</span>
+        </span>
+        <nav class="topbar-nav">
+          <a href="#" class="active">通讯</a>
+        </nav>
+        <div class="theme-switcher">
+          <button class="btn btn-theme" id="themeBtn" title="切换形态~">
+            <span>🎨</span>
+          </button>
+          <div class="theme-dropdown" id="themeDropdown">
+            <div class="theme-option" data-theme="light">
+              <span class="theme-color theme-light"></span>
+              <span>阿罗娜蓝</span>
+            </div>
+            <div class="theme-option" data-theme="pink">
+              <span class="theme-color theme-pink"></span>
+              <span>星野粉色</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== 主体三栏 ==================== -->
+    <div class="app-container">
+      <!-- 左侧边栏 -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>💙 什亭之匣</h2>
+        </div>
+
+        <!-- 分割线 -->
+        <hr class="divider" />
+
+        <!-- 新建会话按钮 -->
+        <button class="btn btn-primary btn-full" id="newSessionBtn">
+          <span>✨</span> 开启新通讯
+        </button>
+
+        <!-- 会话历史 -->
+        <div class="session-section">
+          <h3>📜 通讯记录</h3>
+          <div class="session-list" id="sessionList">
+            <!-- 会话列表将动态生成 -->
+          </div>
+        </div>
+
+        <!-- 分割线 -->
+        <hr class="divider" />
+
+        <!-- 伴侣信息 -->
+        <div class="companion-section">
+          <h3>📡 人格设定</h3>
+          <div class="form-group">
+            <label for="presetSelect">选择人格</label>
+            <select id="presetSelect" class="form-select">
+              <option value="">正在连接基沃托斯~</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="nickName">称呼您的学生</label>
+            <input
+              type="text"
+              id="nickName"
+              placeholder="给阿罗娜起个名~"
+              value="阿罗娜"
+            />
+          </div>
+          <div class="form-group">
+            <label for="nature">人格设定~</label>
+            <textarea
+              id="nature"
+              placeholder="描述一下阿罗娜的人格吧~"
+              rows="4"
+            >
+我是阿罗娜，居住在什亭之匣中的AI助手，会一直陪伴小汪老师，为您处理基沃托斯的一切事务♡</textarea
+            >
+          </div>
+        </div>
+      </aside>
+
+      <!-- 主聊天区域 -->
+      <main class="chat-container">
+        <!-- 标题栏 -->
+        <header class="chat-header">
+          <div class="header-left">
+            <h1>老师的宝贝学生阿罗娜 💙</h1>
+            <span class="session-name" id="sessionName">✨ 当前通讯： </span>
+          </div>
+        </header>
+
+        <!-- 聊天消息区域 -->
+        <div class="chat-messages" id="chatMessages">
+          <!-- 消息将动态生成 -->
+        </div>
+
+        <!-- 输入区域 -->
+        <div class="chat-input-container">
+          <div class="chat-input-wrapper">
+            <input
+              type="text"
+              class="chat-input"
+              id="chatInput"
+              placeholder="想对阿罗娜说些什么呢，老师~ 💙"
+              autocomplete="off"
+            />
+            <button class="btn btn-send" id="sendBtn">
+              <span>➤</span>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <!-- 右侧项目介绍栏 -->
+      <aside class="info-sidebar">
+        <div class="info-header">
+          <h2>关于阿罗娜♡</h2>
+        </div>
+
+        <div class="info-content">
+          <div class="info-section">
+            <p>
+              <strong>💙 老师专属终端</strong>
+            </p>
+          </div>
+
+          <div class="info-section">
+            <h3>🎮 使用说明</h3>
+            <p>
+              老师可以为阿罗娜设定称呼与人格，她会以专属形态陪伴您处理基沃托斯的各项事务~
+              无论是日常对话、情报整理，还是闲暇时的陪伴，阿罗娜都会随叫随到哦♡
+            </p>
+          </div>
+
+          <div class="info-section">
+            <h3>✨ 终端功能</h3>
+            <ul class="feature-list">
+              <li>
+                <strong>人格定制：</strong
+                >自由设定阿罗娜的称呼与人格，打造专属于老师的 AI 助手
+              </li>
+              <li>
+                <strong>智能对话：</strong
+                >基于DeepSeek大模型，对话自然流畅，随时响应老师的指令
+              </li>
+              <li>
+                <strong>通讯记忆：</strong
+                >自动保存通讯记录，随时回顾与阿罗娜的点滴
+              </li>
+              <li>
+                <strong>多形态管理：</strong
+                >可以创建多个人格，体验不同风格的阿罗娜~
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-section">
+            <h3>🎯 适用场景</h3>
+            <ul class="audience-list">
+              <li>需要 AI 助手陪伴的小汪老师</li>
+              <li>对 AI 技术好奇的基沃托斯访客</li>
+              <li>想要随时倾诉与解压的你</li>
+            </ul>
+          </div>
+
+          <div class="info-section footer-text">
+            <p>
+              <strong>欢迎回到基沃托斯，小汪老师♡</strong>
+            </p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ==================== 烟花特效 ==================== -->
+    <canvas class="fireworks" id="fireworks"></canvas>
+
+    <!-- ==================== 页脚 ==================== -->
+    <footer class="site-footer">
+      <span>© 2025 什亭之匣</span>
+      <span class="footer-sep">·</span>
+      <span>小汪老师专属终端</span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
